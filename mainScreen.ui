@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1080</width>
+    <height>323</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="4" column="3">
+     <widget class="QPushButton" name="q4x4">
+      <property name="text">
+       <string>6 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="q4x1">
+      <property name="text">
+       <string>6 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QPushButton" name="q2x4">
+      <property name="text">
+       <string>2 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QTextEdit" name="textInput1"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="q2x1">
+      <property name="text">
+       <string>2 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QLabel" name="cat5">
+      <property name="text">
+       <string>cat5</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="3">
+     <widget class="QPushButton" name="q5x4">
+      <property name="text">
+       <string>8 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="5">
+     <widget class="QPushButton" name="q6x6">
+      <property name="text">
+       <string>10 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QPushButton" name="q6x2">
+      <property name="text">
+       <string>10 poeng</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="QPushButton" name="q5x3">
+      <property name="text">
+       <string>8 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QLabel" name="cat4">
+      <property name="text">
+       <string>cat4</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="5">
+     <widget class="QPushButton" name="q4x6">
+      <property name="text">
+       <string>6 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="QPushButton" name="q6x3">
+      <property name="text">
+       <string>10 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="4">
+     <widget class="QPushButton" name="q6x5">
+      <property name="text">
+       <string>10 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QPushButton" name="q3x2">
+      <property name="text">
+       <string>4 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="5">
+     <widget class="QPushButton" name="q3x6">
+      <property name="text">
+       <string>4 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="2">
+     <widget class="QTextEdit" name="textInput3"/>
+    </item>
+    <item row="5" column="1">
+     <widget class="QPushButton" name="q5x2">
+      <property name="text">
+       <string>8 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="4">
+     <widget class="QPushButton" name="q4x5">
+      <property name="text">
+       <string>6 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="5">
+     <widget class="QPushButton" name="q2x6">
+      <property name="text">
+       <string>2 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="q3x1">
+      <property name="text">
+       <string>4 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QPushButton" name="q6x1">
+      <property name="text">
+       <string>10 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QPushButton" name="q1x4">
+      <property name="text">
+       <string>1 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="cat2">
+      <property name="text">
+       <string>cat2</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="q1x2">
+      <property name="text">
+       <string>1 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QPushButton" name="q5x1">
+      <property name="text">
+       <string>8 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="4">
+     <widget class="QPushButton" name="q5x5">
+      <property name="text">
+       <string>8 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="4">
+     <widget class="QTextEdit" name="textInput5"/>
+    </item>
+    <item row="3" column="4">
+     <widget class="QPushButton" name="q3x5">
+      <property name="text">
+       <string>4 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="q4x2">
+      <property name="text">
+       <string>6 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="cat3">
+      <property name="text">
+       <string>cat3</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QPushButton" name="q4x3">
+      <property name="text">
+       <string>6 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QPushButton" name="q3x3">
+      <property name="text">
+       <string>4 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="5">
+     <widget class="QPushButton" name="q5x6">
+      <property name="text">
+       <string>8 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QTextEdit" name="textInput2"/>
+    </item>
+    <item row="1" column="2">
+     <widget class="QPushButton" name="q1x3">
+      <property name="text">
+       <string>1 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="q1x1">
+      <property name="text">
+       <string>1 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="3">
+     <widget class="QPushButton" name="q6x4">
+      <property name="text">
+       <string>10 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="q2x3">
+      <property name="text">
+       <string>2 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QPushButton" name="q3x4">
+      <property name="text">
+       <string>4 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="5">
+     <widget class="QPushButton" name="q1x6">
+      <property name="text">
+       <string>1 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4">
+     <widget class="QPushButton" name="q2x5">
+      <property name="text">
+       <string>2 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="q2x2">
+      <property name="text">
+       <string>2 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="5">
+     <widget class="QLabel" name="cat6">
+      <property name="text">
+       <string>cat6</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="cat1">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Cat 1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="5">
+     <widget class="QTextEdit" name="textInput6"/>
+    </item>
+    <item row="1" column="4">
+     <widget class="QPushButton" name="q1x5">
+      <property name="text">
+       <string>1 poeng</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="3">
+     <widget class="QTextEdit" name="textInput4"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1080</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
