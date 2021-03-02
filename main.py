@@ -10,15 +10,18 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox, QSystemTrayIcon,QMenu
-import time
 
 class Ui_MainWindow(object):
     score1 =0
     score2 =0
+    score3 =0
+    score4 =0
+    score5 =0
+    score6 =0
+    width = 0
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1920, 300)
-        MainWindow.setGeometry(0, 240, 1920, 300)
+        MainWindow.setGeometry(0, 240, self.width, 300)
         MainWindow.setWindowIcon(QtGui.QIcon('logo.jpg'))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -188,85 +191,113 @@ class Ui_MainWindow(object):
 
         # BUTTONS%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         # write in the lamba function (question,buttonPressed,answer) buttonPressed is allready good
-        self.q1x1.clicked.connect(lambda: self.question("ffffffff", self.q1x1, "svaret1"))
-        self.q1x2.clicked.connect(lambda: self.question("gggggggg", self.q1x2, "svaret2"))
-        self.q1x3.clicked.connect(lambda: self.question("hhhhhhh", self.q1x3, "svaret3"))
-        self.q1x4.clicked.connect(lambda: self.question("jjjjjj", self.q1x4, "svaret"))
-        self.q1x5.clicked.connect(lambda: self.question("kkkkkk", self.q1x5, "svaret"))
-        self.q1x6.clicked.connect(lambda: self.question("lllll", self.q1x6, "svaret"))
-
-        self.q2x1.clicked.connect(lambda: self.question("ffffffff", self.q2x1, "svaret"))
-        self.q2x2.clicked.connect(lambda: self.question("gggggggg", self.q2x2, "svaret"))
-        self.q2x3.clicked.connect(lambda: self.question("hhhhhhh", self.q2x3, "svaret"))
-        self.q2x4.clicked.connect(lambda: self.question("jjjjj", self.q2x4, "svaret"))
-        self.q2x5.clicked.connect(lambda: self.question("kkkkkk", self.q2x5, "svaret"))
-        self.q2x6.clicked.connect(lambda: self.question("lllll", self.q2x6, "svaret"))
-
-        self.q3x1.clicked.connect(lambda: self.question("ffffffff", self.q3x1, "svaret"))
-        self.q3x2.clicked.connect(lambda: self.question("gggggggg", self.q3x2, "svaret"))
-        self.q3x3.clicked.connect(lambda: self.question("hhhhhhh", self.q3x3, "svaret"))
-        self.q3x4.clicked.connect(lambda: self.question("jjjjjj", self.q3x4, "svaret"))
-        self.q3x5.clicked.connect(lambda: self.question("kkkkkk", self.q3x5, "svaret"))
-        self.q3x6.clicked.connect(lambda: self.question("lllll", self.q3x6, "svaret"))
-
-        self.q4x1.clicked.connect(lambda: self.question("ffffffff", self.q4x1, "svaret"))
-        self.q4x2.clicked.connect(lambda: self.question("gggggggg", self.q4x2, "svaret"))
-        self.q4x3.clicked.connect(lambda: self.question("hhhhhhh", self.q4x3, "svaret"))
-        self.q4x4.clicked.connect(lambda: self.question("jjjjjj", self.q4x4, "svaret"))
-        self.q4x5.clicked.connect( lambda: self.question("kkkkkk", self.q4x5, "svaret"))
-        self.q4x6.clicked.connect( lambda: self.question("lllll", self.q4x6, "svaret"))
-
-        self.q5x1.clicked.connect(lambda: self.question("ffffffff", self.q5x1, "svaret"))
-        self.q5x2.clicked.connect(lambda: self.question("gggggggg", self.q5x2, "svaret"))
-        self.q5x3.clicked.connect(lambda: self.question("hhhhhhh", self.q5x3, "svaret"))
-        self.q5x4.clicked.connect(lambda: self.question("jjjjjj", self.q5x4, "svaret"))
-        self.q5x5.clicked.connect(lambda: self.question("kkkkkk", self.q5x5, "svaret"))
-        self.q5x6.clicked.connect(lambda: self.question("lllll", self.q5x6, "svaret"))
-
-        self.q6x1.clicked.connect(lambda: self.question("ffffffff", self.q6x1, "svaret"))
-        self.q6x2.clicked.connect(lambda: self.question("gggggggg", self.q6x2, "svaret"))
-        self.q6x3.clicked.connect(lambda: self.question("hhhhhhh", self.q6x3, "svaret"))
-        self.q6x4.clicked.connect(lambda: self.question("jjjjjj", self.q6x4, "svaret"))
-        self.q6x5.clicked.connect(lambda: self.question("kkkkkk", self.q6x5, "svaret"))
-        self.q6x6.clicked.connect(lambda: self.question("ffffffff", self.q6x6, "svaret"))
+        self.cat1.setText("Fullfør ordtaket")
+        self.q1x1.clicked.connect(lambda: self.question("Jo flere kokker...", self.q1x1, "jo mere søl"))
+        self.q2x1.clicked.connect(lambda: self.question("Det er aldri så galt at det...", self.q2x1, "ikke er godt for noe"))
+        self.q3x1.clicked.connect(lambda: self.question("Den enes død...", self.q3x1, "den andres brød"))
+        self.q4x1.clicked.connect(lambda: self.question("Blind høne...", self.q4x1, "finner også korn"))
+        self.q5x1.clicked.connect(lambda: self.question("Bedre med trøtte armer enn...", self.q5x1, "tomme tarmer"))
+        self.q6x1.clicked.connect(lambda: self.question("Søk råd i vinen, men...", self.q6x1, "fatt beslutning i vann"))
+        self.cat2.setText("Hovedsteder")
+        self.q1x2.clicked.connect(lambda: self.question("Hovedstaden i Danmark?", self.q1x2, "København"))
+        self.q2x2.clicked.connect(lambda: self.question("Hovedstaden i Sør-Korea?", self.q2x2, "Seoul"))
+        self.q3x2.clicked.connect(lambda: self.question("Hovedstaden i Pakistan?", self.q3x2, "Islamabad"))
+        self.q4x2.clicked.connect(lambda: self.question("Hovedstaden i Estland?", self.q4x2, "Tallinn"))
+        self.q5x2.clicked.connect(lambda: self.question("Hovedstaden i Bulgaria?", self.q5x2, "Sofia"))
+        self.q6x2.clicked.connect(lambda: self.question("Hovedstaden i Armenia?", self.q6x2, "Valletta"))
+        self.cat3.setText("Ålesund")
+        self.q1x3.clicked.connect(lambda: self.question("Hvor mange trapper er det opp fjellstua?", self.q1x3, "418"))
+        self.q2x3.clicked.connect(lambda: self.question("Dato og år for bybrannen?", self.q2x3, "Lørdag 23. januar 1904"))
+        self.q3x3.clicked.connect(lambda: self.question("Årstall Ålesund ble by?", self.q3x3, "1837"))
+        self.q4x3.clicked.connect(lambda: self.question("Nye Ålesund kommuen består av hvilke tidligere kommuner? ", self.q4x3, "Ålesund, Skodje, Ørskog, Haram og Sandøy"))
+        self.q5x3.clicked.connect(lambda: self.question("Antall innbyggere? I følge wikipedia", self.q5x3, "66 258"))
+        self.q6x3.clicked.connect(lambda: self.question("Navnet på varaordføreren?", self.q6x3, "Vebjørn Krogsæter"))
+        self.cat4.setText("Andre verdenskrig")
+        self.q1x4.clicked.connect(lambda: self.question("Hvilket år gikk andre verdenskrig?", self.q1x4, "1939 - 1945"))
+        self.q2x4.clicked.connect(lambda: self.question("Hvilke land ble Hitler født?", self.q2x4, "Østerrike"))
+        self.q3x4.clicked.connect(lambda: self.question("Hvilke kjent bok skrev hitler?", self.q3x4, "Mein Kampf"))
+        self.q4x4.clicked.connect(lambda: self.question("Hvilke år ble USA med i krigen?", self.q4x4, "1941"))
+        self.q5x4.clicked.connect( lambda: self.question("Hvilke land ble angrepet av Sovjetunionen den 30.11.1939 og hva heter krigen?", self.q5x4, "Finland og \"Vinterkrigen\""))
+        self.q6x4.clicked.connect( lambda: self.question("Hvem var president i USA i 1945?", self.q6x4, "Harry S. Truman"))
+        self.cat5.setText("Løvenes konge (1994)")
+        self.q1x5.clicked.connect(lambda: self.question("Hva heter hovedkarakteren?", self.q1x5, "Simba"))
+        self.q2x5.clicked.connect(lambda: self.question("Hvem synger de orginale sangene?", self.q2x5, "Elton John"))
+        self.q3x5.clicked.connect(lambda: self.question("Hva heter onkelen til hovedkarakteren?", self.q3x5, "Scar"))
+        self.q4x5.clicked.connect(lambda: self.question("Hvilken dyr er Timon og Pumbaa?", self.q4x5, "Surikat og vortesvin"))
+        self.q5x5.clicked.connect(lambda: self.question("Hva er imdb-ratingen?", self.q5x5, "8.5"))
+        self.q6x5.clicked.connect(lambda: self.question("Hva heter moren til hovedkarakteren?", self.q6x5, "Sarabi"))
+        self.cat6.setText("Sport")
+        self.q1x6.clicked.connect(lambda: self.question("Hvilke tre sportsgrener inngår i et triatlon?", self.q1x6, "Svømming, sykling og løping"))
+        self.q2x6.clicked.connect(lambda: self.question("I hvilken olympisk gren er det ulovlig å ha skjegg?", self.q2x6, "Boksing"))
+        self.q3x6.clicked.connect(lambda: self.question("Hvilken sport er den eneste som er spilt på månen?", self.q3x6, "Golf"))
+        self.q4x6.clicked.connect(lambda: self.question("I hvilken lagsport spiller man på den største banen?", self.q4x6, "Polo"))
+        self.q5x6.clicked.connect(lambda: self.question("Hvem har vunnet eliteserien nest flest ganger?", self.q5x6, "Fredrikstad"))
+        self.q6x6.clicked.connect(lambda: self.question("Når ble vinter-OL arrangert for første gang?", self.q6x6, "1924"))
 
         #Input
-        self.textInput3.textChanged.connect(lambda: self.score(self.textInput3,0))
-        self.textInput6.textChanged.connect(lambda: self.score(self.textInput6,1))
+        self.textInput1.textChanged.connect(lambda: self.score(self.textInput1,1))
+        self.textInput2.textChanged.connect(lambda: self.score(self.textInput2,2))
+        self.textInput3.textChanged.connect(lambda: self.score(self.textInput3,3))
+        self.textInput4.textChanged.connect(lambda: self.score(self.textInput4,4))
+        self.textInput5.textChanged.connect(lambda: self.score(self.textInput5,5))
+        self.textInput6.textChanged.connect(lambda: self.score(self.textInput6,6))
 
         #Updating the score. Kinda disappointed of how it turned out. Tried to pass the self.score1 and self.score2 in as arguments but it would not
-        # update the global variable when you used score = x[0]. Don't know it is possible to fix, wanted to use som sort of pointers, idk how to do that
-        # hmmmmmmmm.... if it is somehow possible then you can remove both if and elif in both ok and clear... fuck
+        # update the global variable when you used score += x[0]. Don't know if it's possible to fix, wanted to use som sort of pointers, idk how to do that
+        # hmmmmmmmm.... If it's somehow possible then you can remove both if and elif in both ok and clear... fuck
     def score(self,textField,score):
         textboxValue = textField.toPlainText()
         x = textboxValue.split()
         if len(x) > 0:
             if x[-1] == "ok":
                 try:
-                    if score == 0:
+                    if score == 1:
                         self.score1+= int(x[0])
                         textField.setText(str(self.score1) +" poeng")
-                    elif score == 1:
+                    elif score == 2:
                         self.score2+= int(x[0])
                         textField.setText(str(self.score2) +" poeng")
+                    elif score == 3:
+                        self.score3+= int(x[0])
+                        textField.setText(str(self.score3) +" poeng")
+                    elif score == 4:
+                        self.score4+= int(x[0])
+                        textField.setText(str(self.score4) +" poeng")   
+                    elif score == 5:
+                        self.score5+= int(x[0])
+                        textField.setText(str(self.score5) +" poeng")     
+                    elif score == 6:
+                        self.score6+= int(x[0])
+                        textField.setText(str(self.score6) +" poeng")                                                                                        
                 except:
                     pass
             elif  x[-1] == "clear":
                 textField.clear()
-                if score == 0:
+                if score == 1:
                     self.score1=0
                     textField.setText(str(self.score1) +" poeng")
-                elif score == 1:
+                elif score == 2:
                     self.score2=0
                     textField.setText(str(self.score2) +" poeng")
-                    
+                elif score == 3:
+                    self.score3=0
+                    textField.setText(str(self.score3) +" poeng")
+                elif score == 4:
+                    self.score4=0
+                    textField.setText(str(self.score4) +" poeng")
+                elif score == 5:
+                    self.score5=0
+                    textField.setText(str(self.score5) +" poeng")
+                elif score == 6:
+                    self.score6=0
+                    textField.setText(str(self.score6) +" poeng")
                 
             
 
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Quiz"))
         self.q4x4.setText(_translate("MainWindow", "6 poeng"))
         self.q4x1.setText(_translate("MainWindow", "6 poeng"))
         self.q2x4.setText(_translate("MainWindow", "2 poeng"))
@@ -317,29 +348,32 @@ class Ui_MainWindow(object):
         question.setFont(font)
         question.setWindowTitle("Spørsmål")
         question.setText(
-            "Spørsmålet er som følger: " + q)
+            "Spørsmålet er som følger:\n" + q)
         question.setGeometry(800, 50, 1000, 1000)
         question.setIcon(QMessageBox.Question)
         button.setStyleSheet("background-color : red")
-        question.setDetailedText("Svaret er:" + answer)
-
-
+        question.setDetailedText("Svaret er:\n" + answer)
         x = question.exec()
 
+    def setWidth(self,width):
+        self.width = width
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     trayIcon = QSystemTrayIcon(QtGui.QIcon('logo.jpg'),parent=app)
     trayIcon.setToolTip("Quiz gui")
-    trayIcon.show()
+    ui = Ui_MainWindow()
+    screen = app.primaryScreen()
+    rect = screen.availableGeometry()
+    MainWindow = QtWidgets.QMainWindow()
+    MainWindow.setWindowIcon(QtGui.QIcon('logo.jpg'))
     menu=QMenu()
     exitAction=menu.addAction("Exit")
     exitAction.triggered.connect(app.quit)
-
-    MainWindow = QtWidgets.QMainWindow()
-    MainWindow.setWindowIcon(QtGui.QIcon('logo.jpg'))
-    ui = Ui_MainWindow()
+    trayIcon.setContextMenu(menu)
+    trayIcon.show()
+    ui.setWidth(rect.width())
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
