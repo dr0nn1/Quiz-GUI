@@ -204,7 +204,7 @@ class Ui_MainWindow(object):
         self.q3x2.clicked.connect(lambda: self.question("Hovedstaden i Pakistan?", self.q3x2, "Islamabad"))
         self.q4x2.clicked.connect(lambda: self.question("Hovedstaden i Estland?", self.q4x2, "Tallinn"))
         self.q5x2.clicked.connect(lambda: self.question("Hovedstaden i Bulgaria?", self.q5x2, "Sofia"))
-        self.q6x2.clicked.connect(lambda: self.question("Hovedstaden i Armenia?", self.q6x2, "Valletta"))
+        self.q6x2.clicked.connect(lambda: self.question("Hovedstaden i Armenia?", self.q6x2, "Jerevan"))
         self.cat3.setText("Ålesund")
         self.q1x3.clicked.connect(lambda: self.question("Hvor mange trapper er det opp fjellstua?", self.q1x3, "418"))
         self.q2x3.clicked.connect(lambda: self.question("Dato og år for bybrannen?", self.q2x3, "Lørdag 23. januar 1904"))
